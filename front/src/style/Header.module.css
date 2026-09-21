@@ -57,10 +57,12 @@
 
 .input .textDisabled {
     color: var(--text-disabled);
+    transition: all 0.2s ease;
 }
 
 .input .text {
     color: var(--text-h);
+    transition: all 0.2s ease;
 }
 
 

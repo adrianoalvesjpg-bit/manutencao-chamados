@@ -7,6 +7,7 @@
   --accept: #43b62096;
   --error: #b6202096;
   --shadow-color: #8d8d8d;
+  --card: #fbf9f9;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -37,6 +38,8 @@
     --accept: #3cff008e;
     --error: #ff00008e;
     --shadow-color: #282828;
+    --card: #3e3e3e;
+
   }
 
   #social .button-icon {
