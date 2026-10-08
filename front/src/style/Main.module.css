@@ -54,6 +54,11 @@ h1 {
     margin: 5px;
 }
 
+p {
+  font-size: 1.1rem;
+}
+
 span {
     color: var(--text-h);
+    font-size: 1.1rem;
 }

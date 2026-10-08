@@ -7,7 +7,7 @@ export default function Main() {
     <div className={StMain.container}>
       <div className={StMain.card} id={StMain.open}>
         <div className={StMain.titleDiv}>
-          <h1>Manutenção de Equipamento - MANEQP-0001</h1>
+          <h1>Manutenção de Equipamento | MANEQP-0001</h1>
         </div>
 
         <div className={StMain.main}>
