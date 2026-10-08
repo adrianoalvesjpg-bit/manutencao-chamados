@@ -8,10 +8,12 @@ import Main from './components/Main'
 function App() {
 
   return (
-    <div className={StApp.app}>
-      <aside className={StApp.sidebar}> <Side/> </aside>
+    <div>
       <header className={StApp.header}> <Header/> </header>
-      <main className={StApp.main}> <Main/> </main>
+      <main className={StApp.app}>
+        <aside className={StApp.sidebar}> <Side/> </aside>
+        <main className={StApp.main}> <Main/> </main>
+      </main>
     </div>
   )
 }

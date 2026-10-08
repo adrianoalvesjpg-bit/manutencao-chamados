@@ -1,11 +1,12 @@
 .app {
   display: grid;
   grid-template-columns: minmax(120px, 300px) 1fr;
-  grid-template-rows: minmax(120px, 1fr) 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas:
-    "sidebar header"
     "sidebar main";
-  height: 100vh;
+  height: 89vh;
+  max-width: var(--width-window);
+  margin: 0 auto;
 }
 
 @media (max-width: 1024px) {
@@ -14,24 +15,27 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .app {
         grid-template-columns: 1fr;
-        grid-template-rows: 100px 1fr 1fr;
+        grid-template-rows: 1fr 6.5fr;
         grid-template-areas:
         "sidebar"
-        "header"
         "main";
 
     }
 }
+
+
 
 .sidebar {
   grid-area: sidebar; 
   overflow-y: auto;
 }
 .header { 
-  grid-area: header; 
+  background-color: var(--accent);
+  border-bottom: 2px solid var(--border);
+  height: 80px;
 }
 
 .main {
