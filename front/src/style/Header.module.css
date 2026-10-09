@@ -5,12 +5,52 @@
     padding: 10px 20px 10px 20px;
     justify-content: space-between;
     height: 100%;
-    max-width: var(--width-window);
+    padding: 0px var(--padding) 0px var(--padding);
     margin: 0 auto;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 
 
+.user {
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 0 4px var(--border-dark);
+    border-radius: 50%;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.user:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px var(--border-dark);
+    color: var(--text-h);
+
+}
+
+.user::before {
+    content: '▾';
+    position: absolute;
+    top: 10px;
+    left: 28px;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0px 20px 0px 20px;
+    }
+}

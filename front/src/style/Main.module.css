@@ -2,3 +2,8 @@
     display: block;
 }
 
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: left;
+}

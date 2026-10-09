@@ -5,8 +5,8 @@ export default function Header() {
 
   return (
     <div className={StHeader.container}>
-      <h1>Chamados de Manutenção</h1>
-      <button>Login</button>
+      <h1>Task Hub</h1>
+      <button className={StHeader.user}>AV</button>
     </div>
   )
 }

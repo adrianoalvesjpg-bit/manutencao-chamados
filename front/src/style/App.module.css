@@ -1,13 +1,65 @@
 .app {
   display: grid;
   grid-template-columns: minmax(120px, 300px) 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 80px 1fr 40px;
   grid-template-areas:
+    "sidebar title"
     "sidebar main";
-  height: 89vh;
-  max-width: var(--width-window);
+  height: 88vh;
+  padding: 0px 5px 0px 5px;
   margin: 0 auto;
 }
+
+
+.sidebar {
+  grid-area: sidebar; 
+  overflow-y: auto;
+  border-right: 2px solid var(--border);
+}
+
+.title {
+  grid-area: title;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.header { 
+  background-color: var(--accent);
+  border-bottom: 2px solid var(--border);
+  height: 80px;
+}
+
+.footer {
+  border-top: 2px solid var(--border);
+  height: 40px;
+  text-align: center;
+  padding: 5px;
+}
+
+.main {
+  grid-area: main;
+  overflow-y:auto;
+  padding: 0px 24px 24px 24px;
+}
+
+/* Estilizando a barra de rolagem */
+.main::-webkit-scrollbar {
+  width: 10px; /* largura da barra */
+}
+
+.main::-webkit-scrollbar-track {
+  background: var(--scrollbar-track); /* cor do trilho */
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb); /* cor do "polegar" */
+  border-radius: 5px; /* arredondar */
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover); /* cor ao passar o mouse */
+}
+
 
 @media (max-width: 1024px) {
     .app {
@@ -18,28 +70,21 @@
 @media (max-width: 550px) {
     .app {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 6.5fr;
+        grid-template-rows: 1fr 60px 6.5fr;
         grid-template-areas:
         "sidebar"
+        "title"
         "main";
 
     }
+
+    .sidebar {
+      border: none;
+      border-bottom: 2px solid var(--border);
+
+    }
+
+
 }
 
 
-
-.sidebar {
-  grid-area: sidebar; 
-  overflow-y: auto;
-}
-.header { 
-  background-color: var(--accent);
-  border-bottom: 2px solid var(--border);
-  height: 80px;
-}
-
-.main {
-  grid-area: main;
-  overflow-y:auto;
-  padding: 24px;
-}

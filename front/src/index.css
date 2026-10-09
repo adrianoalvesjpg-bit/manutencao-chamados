@@ -9,13 +9,17 @@
   --shadow-color: #8d8d8d;
   --card: #fbf9f9;
   --accent: #e0f7fa;
+  --border-dark: #bcb8c4;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
+  --scrollbar-thumb: #888;
+  --scrollbar-thumb-hover: #555;
+  --scrollbar-track: #f1f1f1;
 
-  --padding: 20px;
+  --padding: 150px;
   --width-window: 1600px;
 
   font: 17px/145% var(--sans);
@@ -33,10 +37,10 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
-    --text-h: #f3f4f6;
+    --text-h: #e2e2e2;
     --text-disabled:#f3f4f685;
     --bg: #16171d;
     --border: #2e303a;
@@ -44,6 +48,12 @@
     --error: #ff00008e;
     --shadow-color: #282828;
     --card: #3e3e3e;
+    --accent: #211e1e;
+
+    --scrollbar-thumb: #888;
+    --scrollbar-thumb-hover: #f1f1f1;
+    --scrollbar-track: #2d2d2d;
+
 
   }
 
@@ -58,7 +68,7 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  height: 100%;
 }
 
 #root {
@@ -120,4 +130,8 @@ code {
 li {
   list-style: none;
   margin: 25px 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
 }

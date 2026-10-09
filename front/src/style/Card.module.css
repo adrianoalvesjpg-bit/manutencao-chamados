@@ -45,16 +45,16 @@
 }
 
 
-h1 {
-    font-size: 1.5rem;
-    margin: 5px;
+.card .titleDiv h1 {
+  font-size: 1.6rem;
+  margin: 5px;
 }
 
-p {
+.card p {
   font-size: 1.1rem;
 }
 
-span {
+.card span {
     color: var(--text-h);
     font-size: 1.1rem;
 }
