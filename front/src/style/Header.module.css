@@ -17,7 +17,7 @@ h1 {
 .user {
     display: flex;
     position: relative;
-    background-color: transparent;
+    background-color: var(--bg);
     border: 1px solid var(--border-dark);
     box-shadow: 0 0 4px var(--border-dark);
     border-radius: 50%;

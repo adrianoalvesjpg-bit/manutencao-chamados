@@ -1,0 +1,50 @@
+.container {
+    padding: 10px 5px;
+    top: 70px;
+    right: 140px;
+    color: var(--text);
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    z-index: 1;
+    text-align: left;
+    display: none;
+    position: fixed;
+
+}
+
+.show {
+    display: block;
+}
+
+
+.container hr {
+    border:none;
+    border-top: 1px solid var(--border);
+}
+
+.container p {
+    padding: 5px 8px 7px 15px;
+    cursor: pointer;
+}
+
+.container a {
+    padding: 5px 8px 7px 15px;
+    cursor: pointer;
+}
+
+.container a:hover {
+    color: var(--text-h);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.container section {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.close {
+    padding-top: 20px;
+}
