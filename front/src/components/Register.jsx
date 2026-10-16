@@ -1,10 +1,12 @@
 import { useState } from 'react'
 
 import StRegister from '../style/Register.module.css'
+import Button from './Button'
+
 
 import { VscSend } from "react-icons/vsc";
 
-export default function Register() {
+export default function Register({ enabled=true }) {
   const [sector, setSector] = useState('eng1')
   const [category, setCategory] = useState('1')
   const [codeEquipament, setCodeEquipament] = useState(true)
@@ -21,17 +23,39 @@ export default function Register() {
     setTextDisabled(isEquipament ? StRegister.text : StRegister.textDisabled)
   }
 
+  if (!enabled) {
+    return null
+  }
+
   return (
     <div className={StRegister.overlay}>
       <div className={StRegister.container}>
-        <div className={StRegister.main}>
-          <div className={StRegister.input}>
-            <span>Solicitante</span>
+
+        <section className={StRegister.close} >
+          X
+        </section>
+
+        <section className={StRegister.left}>
+
+          <div className={StRegister.formGroup}>
+            <label>Solicitante</label>
             <input type="text" />
           </div>
 
-          <div className={StRegister.input}>
-            <span>Setor</span>
+          <div className={StRegister.formGroup}>
+            <label>Categoria</label>
+            <select value={category} onChange={(e) => selectCategory(e.target.value)}>
+              <option value="1">Manutenção de Equipamento</option>
+              <option value="2">Manutenção Predial</option>
+            </select>
+          </div>
+
+        </section>
+
+        <section className={StRegister.right}>
+
+          <div className={StRegister.formGroup}>
+            <label>Setor</label>
             <select value={sector} onChange={(e) => selectSector(e.target.value)}>
               <option value="eng1">Engenharia de Produto</option>
               <option value="eng2">Engenharia de Processo</option>
@@ -57,30 +81,22 @@ export default function Register() {
             </select>
           </div>
 
-          <div className={StRegister.input}>
-            <span>Categoria</span>
-            <select value={category} onChange={(e) => selectCategory(e.target.value)}>
-              <option value="1">Manutenção de Equipamento</option>
-              <option value="2">Manutenção Predial</option>
-            </select>
-          </div>
-
-          <div className={StRegister.input}>
-            <span className={textDisabled}>Código do Equipamento</span>
+          <div className={StRegister.formGroup}>
+            <label className={textDisabled}>Código do Equipamento</label>
             <input type="number" disabled={!codeEquipament} />
           </div>
 
-        </div>
+        </section>
 
-        <div className={StRegister.description}>
-          <span>Descrição</span>
+        <section className={StRegister.description}>
+          <label>Descrição</label>
           <textarea type="text" />
-        </div>
-        <div className={StRegister.button}>
-          <button>
-            <VscSend />
-          </button>
-        </div>
+        </section>
+
+        <section className={StRegister.button}>
+          <Button text={<><VscSend /> Enviar Task</>}/>
+        </section>
+
       </div>
     </div>
   )

@@ -14,7 +14,7 @@
 
 .header { 
   grid-area: header;
-  background-color: var(--accent);
+  background-color: var(--header);
   border-bottom: 2px solid var(--border);
   height: 80px;
 }
@@ -62,10 +62,17 @@
   width: 100%;
   margin-right: auto;
   top: 0;
+  justify-content: space-between;
+  padding-right: 100px;
 }
 
+#btnRegister {
+  font-size: 1rem;
+}
+.iconSize {
+  font-size: 1.5rem;
 
-
+}
 
 .main::-webkit-scrollbar { /* scroll */
   width: 10px;
@@ -110,5 +117,6 @@
 
 
 }
+
 
 

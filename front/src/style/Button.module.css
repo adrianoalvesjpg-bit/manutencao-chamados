@@ -1,0 +1,80 @@
+.container {
+    display: block;
+}
+
+.container button {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 3px rgba(107, 99, 117, 0.2);
+    padding: 8px 7px;
+    font-weight: 550;
+}
+
+.container button:hover {
+    filter: brightness(1.15);
+}
+
+.container button:active {
+    transform: translateY(1px);
+}
+
+
+
+.primary {
+    background-color: var(--btn-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+
+}
+
+.secondary  {
+    background-color: var(--btn-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-secondary);
+
+}
+
+.error {
+    background-color: var(--btn-error);
+    color: var(--text-error);
+    border: 1px solid var(--border-error);
+
+
+}
+
+.accept {
+    background-color: var(--btn-accept);
+    color: var(--text-accept);
+    border: 1px solid var(--border-accept);
+
+}
+
+.size0 {
+  font-size: 0.7rem;
+}
+
+
+.size1 {
+  font-size: 0.8rem;
+}
+
+.size2 {
+  font-size: 0.9rem;
+}
+
+.size3 {
+  font-size: 1rem;
+}
+
+.size4 {
+  font-size: 1.1rem;
+}
+
+.size5 {
+  font-size: 1.2rem;
+}

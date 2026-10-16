@@ -1,11 +1,18 @@
 import { useState } from 'react'
 import StApp from './style/App.module.css'
 
+import { MdOutlineAdd } from "react-icons/md";
+
 import Side from './components/Side'
 import Header from './components/Header'
 import Main from './components/Main'
+import Button from './components/Button'
+import Register from './components/Register'
+
 
 function App() {
+
+  const [showRegister, setShowRegister]= useState(false)
 
   return (
     <div className={StApp.app}>
@@ -15,8 +22,10 @@ function App() {
         <main className={StApp.main}>
             <div className={StApp.title}>
               <h1>Ordens de Manutenção</h1>
+              <Button size='2' variant='primary' text={<> <MdOutlineAdd /> Novo Chamado</>} func={()=>{setShowRegister(!showRegister)}}/>
             </div>
             <Main/>
+            <Register enabled={showRegister}/>
         </main>
       </div>
       <footer className={StApp.footer}> <p>&copy; 2026 Adriano Alves Vieira Development - Todos os direitos reservados</p> </footer>

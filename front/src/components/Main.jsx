@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 import Card from './Card'
 import StMain from '../style/Main.module.css'
-import Register from './Register'
 
 export default function Main() {
 
@@ -61,7 +60,6 @@ export default function Main() {
 
   return (
     <div className={StMain.container}>
-      <Register/>
       <ul>
         {bd.map((item, index) => (
           <li key={index}>
