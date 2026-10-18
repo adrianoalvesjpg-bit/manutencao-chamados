@@ -94,7 +94,7 @@ export default function Register({ enabled=true }) {
         </section>
 
         <section className={StRegister.button}>
-          <Button text={<><VscSend /> Enviar Task</>}/>
+          <Button size='2' variant='secondary' text={<><VscSend /> Enviar Task</>}/>
         </section>
 
       </div>

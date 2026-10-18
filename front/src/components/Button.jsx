@@ -10,7 +10,7 @@ export default function Button({
   const variants={
     'primary': StButton.primary,
     'secondary': StButton.secondary,
-    'error': StButton.error,
+    'destruction': StButton.destruction,
     'accept': StButton.accept,
   }
 

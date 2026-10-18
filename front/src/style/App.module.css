@@ -6,7 +6,7 @@
     "header"
     "container"
     "footer";
-  padding: 0px 5px 0px 5px;
+  padding: 0px;
   height: 100vh;
   margin: 0;
 }
@@ -57,13 +57,13 @@
   position: sticky;
   background-color: var(--bg);
   text-align: left;
-  padding: 10px;
+  padding: 0 30px;
   margin: 0;
   width: 100%;
-  margin-right: auto;
   top: 0;
   justify-content: space-between;
-  padding-right: 100px;
+  align-items: center;
+  padding-right: 50px;
 }
 
 #btnRegister {

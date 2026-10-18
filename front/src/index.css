@@ -38,20 +38,20 @@
   --scrollbar-thumb-hover: #555;
   --scrollbar-track: #f1f1f1;
 
-  --btn-primary: #161414;
-  --btn-secondary: #898989;
-  --btn-error: #990202c6;
-  --btn-accept: #029925c6;
+  --btn-primary: #222222;
+  --btn-secondary: #575757a1;
+  --btn-destruction: #99020243;
+  --btn-accept: #14990238;
 
   --border-primary: #3a3a3a;
-  --border-secondary: #b1b1b1;
-  --border-error: #990202c6;
-  --border-accept: #029925c6;
+  --border-secondary: #878787;
+  --border-destruction: #7d0000ad;
+  --border-accept: #058000e6;
   
-  --text-primary:#fff;
-  --text-secondary:#fff;
-  --text-error:#750202;
-  --text-accept:#067502;
+  --text-primary:#f0f0f0;
+  --text-secondary:#f0f0f0;
+  --text-destruction:#b10e0e;
+  --text-accept:#08a703e6;
 
 }
 
@@ -69,19 +69,19 @@
   --header: #211e1e;
 
   --btn-primary: #7b7b7b67;
-  --btn-secondary: #f4f4f4;
-  --btn-error: #990202c6;
-  --btn-accept: #029925c6;
+  --btn-secondary: #eeeeee;
+  --btn-destruction: #99020243;
+  --btn-accept: #14990238;
 
   --border-primary: #595959;
   --border-secondary: #b2b2b2;
-  --border-error: #990202c6;
-  --border-accept: #029925c6;
+  --border-destruction: #7d0000ad;
+  --border-accept: #058000e6;
   
-  --text-primary:#fff;
+  --text-primary:#f0f0f0;
   --text-secondary:#0b0b0b;
-  --text-error:#750202;
-  --text-accept:#067502;
+  --text-destruction:#cc0a0a;
+  --text-accept:#08a703e6;
 
 
   --scrollbar-thumb: #888;
@@ -104,8 +104,6 @@ body {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;

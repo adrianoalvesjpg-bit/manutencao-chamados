@@ -12,6 +12,7 @@
     cursor: pointer;
     box-shadow: 0 2px 3px rgba(107, 99, 117, 0.2);
     padding: 8px 7px;
+    padding-right: 10px;
     font-weight: 550;
 }
 
@@ -39,10 +40,10 @@
 
 }
 
-.error {
-    background-color: var(--btn-error);
-    color: var(--text-error);
-    border: 1px solid var(--border-error);
+.destruction {
+    background-color: var(--btn-destruction);
+    color: var(--text-destruction);
+    border: 1px solid var(--border-destruction);
 
 
 }
