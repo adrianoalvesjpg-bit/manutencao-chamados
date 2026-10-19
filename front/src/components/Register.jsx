@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import StRegister from '../style/Register.module.css'
 import Button from './Button'
@@ -6,7 +6,7 @@ import Button from './Button'
 
 import { VscSend } from "react-icons/vsc";
 
-export default function Register({ enabled=true }) {
+export default function Register({ enabled=true, onClose }) {
   const [sector, setSector] = useState('eng1')
   const [category, setCategory] = useState('1')
   const [codeEquipament, setCodeEquipament] = useState(true)
@@ -23,15 +23,15 @@ export default function Register({ enabled=true }) {
     setTextDisabled(isEquipament ? StRegister.text : StRegister.textDisabled)
   }
 
-  if (!enabled) {
-    return null
-  }
+  const classMain = enabled ? StRegister.overlay : StRegister.hidden
+
+
 
   return (
-    <div className={StRegister.overlay}>
+    <div className={classMain}>
       <div className={StRegister.container}>
 
-        <section className={StRegister.close} >
+        <section onClick={onClose} className={StRegister.close} >
           X
         </section>
 

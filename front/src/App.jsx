@@ -12,7 +12,7 @@ import Register from './components/Register'
 
 function App() {
 
-  const [showRegister, setShowRegister]= useState(false)
+  const [enabled, setEnabled] = useState(false)
 
   return (
     <div className={StApp.app}>
@@ -22,10 +22,10 @@ function App() {
         <main className={StApp.main}>
             <div className={StApp.title}>
               <h1>Ordens de Manutenção</h1>
-              <Button size='2' variant='primary' text={<> <MdOutlineAdd /> Novo Chamado</>} func={()=>{setShowRegister(!showRegister)}}/>
+              <Button size='2' variant='primary' text={<> <MdOutlineAdd /> Novo Chamado</>} func={()=>{setEnabled(!enabled)}}/>
             </div>
             <Main/>
-            <Register enabled={showRegister}/>
+            <Register enabled={enabled} onClose={() => setEnabled(false)}/>
         </main>
       </div>
       <footer className={StApp.footer}> <p>&copy; 2026 Adriano Alves Vieira Development - Todos os direitos reservados</p> </footer>
