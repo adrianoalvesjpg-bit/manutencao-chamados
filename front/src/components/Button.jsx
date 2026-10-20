@@ -2,7 +2,7 @@ import React from 'react'
 import StButton from '../style/Button.module.css'
 export default function Button({
   text='',
-  func=()=>{},
+  onClick=()=>{},
   variant='primary',
   size='1',
 }) {
@@ -28,7 +28,7 @@ export default function Button({
 
   return (
     <div className={StButton.container}>
-      <button className={`${classVariant} ${classSize}`} onClick={func}>{text}</button>
+      <button className={`${classVariant} ${classSize}`} onClick={onClick}>{text}</button>
     </div>
   )
 }

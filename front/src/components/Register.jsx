@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import StRegister from '../style/Register.module.css'
 import Button from './Button'
@@ -26,6 +26,9 @@ export default function Register({ enabled=true, onClose }) {
   const classMain = enabled ? StRegister.overlay : StRegister.hidden
 
 
+  async function taskSend (){
+    console.log('task enviada!')
+  }
 
   return (
     <div className={classMain}>
@@ -94,7 +97,7 @@ export default function Register({ enabled=true, onClose }) {
         </section>
 
         <section className={StRegister.button}>
-          <Button size='2' variant='secondary' text={<><VscSend /> Enviar Task</>}/>
+          <Button size='2' variant='secondary' onClick={() => taskSend()} text={<><VscSend /> Enviar Chamado</>}/>
         </section>
 
       </div>

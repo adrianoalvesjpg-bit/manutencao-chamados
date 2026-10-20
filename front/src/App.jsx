@@ -22,7 +22,7 @@ function App() {
         <main className={StApp.main}>
             <div className={StApp.title}>
               <h1>Ordens de Manutenção</h1>
-              <Button size='2' variant='primary' text={<> <MdOutlineAdd /> Novo Chamado</>} func={()=>{setEnabled(!enabled)}}/>
+              <Button size='2' variant='primary' text={<> <MdOutlineAdd /> Novo Chamado</>} onClick={()=>{setEnabled(!enabled)}}/>
             </div>
             <Main/>
             <Register enabled={enabled} onClose={() => setEnabled(false)}/>

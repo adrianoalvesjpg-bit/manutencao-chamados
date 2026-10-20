@@ -1,15 +1,37 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { IoIosLogOut } from "react-icons/io";
-import { IoSettingsOutline  } from "react-icons/io5";
+import { IoSettingsOutline } from "react-icons/io5";
 
 import StDropDownMenu from '../style/DropDownMenu.module.css'
 
-export default function DropDownMenu( {show} ) {
+export default function DropDownMenu({ show, onClose, btnRef }) {
 
-    const [darkMode, setDarkMode]= useState(true);
+    const refMenu = useRef()
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (
+                refMenu.current &&
+                !refMenu.current.contains(e.target) &&
+                btnRef.current &&
+                !btnRef.current.contains(e.target)
+            ) {
+                onClose()
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside)
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    }, [])
+
+
+    const [darkMode, setDarkMode] = useState(true);
 
     useEffect(() => {
         if (darkMode) {
@@ -19,26 +41,26 @@ export default function DropDownMenu( {show} ) {
             document.documentElement.classList.add('light');
             document.documentElement.classList.remove('dark');
         }
-    }, [darkMode])  
-    
-  return (
-    <div className={`${StDropDownMenu.container} ${show ? StDropDownMenu.show : ''}`}>
-        <section>
-            <a>Configurações da Conta</a>
-            <IoSettingsOutline  />
-        </section>
-        <section onClick={() => setDarkMode(!darkMode)}>
-            <a>{darkMode ? 'Modo Claro' : 'Modo Escuro'}</a>
-            { darkMode === true ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
-        </section>
-        
-        <section className={StDropDownMenu.close}>
-            <a>Sair</a>
-            <IoIosLogOut />
-        </section>
+    }, [darkMode])
 
-        <hr />
-        <p>adrianoalves.jpg@gmail.com</p>
-    </div>
-  )
+    return (
+        <div ref={refMenu} className={`${StDropDownMenu.container} ${show ? StDropDownMenu.show : ''}`}>
+            <section>
+                <a>Configurações da Conta</a>
+                <IoSettingsOutline />
+            </section>
+            <section onClick={() => setDarkMode(!darkMode)}>
+                <a>{darkMode ? 'Modo Claro' : 'Modo Escuro'}</a>
+                {darkMode === true ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
+            </section>
+
+            <section className={StDropDownMenu.close}>
+                <a>Sair</a>
+                <IoIosLogOut />
+            </section>
+
+            <hr />
+            <p>adrianoalves.jpg@gmail.com</p>
+        </div>
+    )
 }
